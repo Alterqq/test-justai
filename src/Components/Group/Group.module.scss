@@ -1,0 +1,27 @@
+.group {
+  .groupTitle {
+    padding: 10px 5px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  .user {
+    padding: 5px 15px;
+    border-bottom: 1px solid black;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.groupBorder:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.include {
+  color: black;
+  font-weight: bold;
+}

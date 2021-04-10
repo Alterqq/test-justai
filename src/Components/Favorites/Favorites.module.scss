@@ -1,0 +1,17 @@
+.favoritesArea {
+  width: 50%;
+  border-bottom: 1px solid black;
+
+  .title {
+    padding: 5px;
+    border-bottom: 1px solid black;
+  }
+
+  .emptyState {
+    padding: 10px;
+  }
+}
+
+.background {
+  background-color: lightgray;
+}
