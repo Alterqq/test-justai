@@ -17,7 +17,9 @@ const Group = ({users, group, filter}) => {
   }, [users, start, end])
 
   return (
-      <div className={`${styles.group} ${styles.groupBorder && viewGroup}`}>
+      <div className={`${styles.group} 
+      ${styles.groupBorder && viewGroup} 
+      ${filteredUsers.length === 0 && styles.emptyState}`}>
         <div className={styles.groupTitle} onClick={() => setViewGroup(!viewGroup)}>{group}</div>
         {viewGroup && filter.trim() === '' && sortedUsers.map(u => <UserCard key={u.login.uuid} user={u}/>)}
         {viewGroup && filter.trim() !== '' && filteredUsers
