@@ -14,7 +14,7 @@ function App() {
     dispatch(getUsers())
   }, [dispatch])
 
-  if (isFetching) return  <Loader/>
+  if (isFetching) return <Loader/>
 
   return (
       <div className={styles.app}>

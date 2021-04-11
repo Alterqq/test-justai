@@ -11,7 +11,7 @@ const Favorites = () => {
   const dispatch = useDispatch()
 
   function handleDrop() {
-    if (!favorites.filter(u => u.login.uuid === currentUser.login.uuid).length) {
+    if (currentUser !== null && !favorites.filter(u => u.login.uuid === currentUser.login.uuid).length) {
       dispatch(addFavorites(currentUser))
     }
     dispatch(setCurrentUser(null))
@@ -22,7 +22,10 @@ const Favorites = () => {
   }
 
   return (
-      <div className={`${styles.favoritesArea} ${favoriteBackground && styles.background}`} onDragOver={onDragOver} onDrop={handleDrop}>
+      <div
+          className={`${styles.favoritesArea} ${favoriteBackground && styles.background}`}
+          onDragOver={onDragOver}
+          onDrop={handleDrop}>
         <div className={styles.title}>Избранные</div>
         {favorites.length !== 0 && favorites.map(user => <FavoriteUserCard key={user.login.uuid} user={user}/>)}
         {!favorites.length && <div className={styles.emptyState}>Пока нет избранных пользователей</div>}

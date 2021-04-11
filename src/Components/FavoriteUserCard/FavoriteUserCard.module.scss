@@ -4,6 +4,9 @@
   gap: 10px;
   justify-content: space-between;
   border-bottom: 1px solid black;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
 
   .deleteButton {
     cursor: pointer;
@@ -11,30 +14,24 @@
   }
 }
 
-.slide-bck-center {
-  -webkit-animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-  animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-}
-
-@-webkit-keyframes slide-bck-center {
+@-webkit-keyframes scale-up-center {
   0% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
-    -webkit-transform: translateZ(-400px);
-    transform: translateZ(-400px);
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
-@keyframes slide-bck-center {
+@keyframes scale-up-center {
   0% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
-    -webkit-transform: translateZ(-400px);
-    transform: translateZ(-400px);
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
-
 
