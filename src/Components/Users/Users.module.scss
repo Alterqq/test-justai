@@ -1,6 +1,15 @@
 .usersArea {
   width: 50%;
   border-right: 1px solid black;
+  position: relative;
+
+  .clearIcon {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    cursor: pointer;
+    user-select: none;
+  }
 
   input {
     width: 100%;
